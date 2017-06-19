@@ -34,5 +34,5 @@ class SubscriptionDetailGet(TestCase):
 
 class SubscriptionDetailNotFound(TestCase):
     def test_not_found(self):
-        resp = self.client.get(r('subscriptions:detail','00000000-0000-0000-0000-000000000000'))
+        resp = self.client.get(r('subscriptions:detail',0))
         self.assertEqual(404, resp.status_code)

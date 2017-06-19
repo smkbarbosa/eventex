@@ -5,5 +5,5 @@ from eventex.subscriptions.views import new
 
 urlpatterns = [
     url(r'^$', new, name='new'),
-    url(r'^([\w-]+)/$', detail, name='detail'),
+    url(r'^(\d+)/$', detail, name='detail'),
 ]
