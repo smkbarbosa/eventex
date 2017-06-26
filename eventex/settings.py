@@ -94,7 +94,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Araguaina'
 
 USE_I18N = True
 
