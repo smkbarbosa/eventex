@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+ <h3>{{ talk.start }} - {{ talk.title }}</h3>
+        <h4>Por
+            {%  for speaker in talk.speakers.all %}
+            <a href="{{ speaker.get_absolute_url }}">{{ speaker.name }}</a>
+                {% endfor %}
+                </h4>
+<p>{{ talk.description }}</p>
