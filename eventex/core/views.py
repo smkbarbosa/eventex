@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from eventex.core.models import Speaker, Talk
+from eventex.core.models import Speaker, Talk, Course
 
 
 def home(request):
@@ -9,13 +9,12 @@ def home(request):
 
 def speaker_detail(request, slug):
     speaker = get_object_or_404(Speaker, slug=slug)
-    #speaker = Speaker.objects.get(slug=slug)
     return render(request, 'core/speaker_detail.html', {'speaker': speaker})
 
 def talk_list(request):
-
     context = {
         'morning_talks': Talk.objects.at_morning(), ## filtra todas as palestras menores que meio dia
         'afternoon_talks': Talk.objects.at_afternoon(), ## filtra palestra maiores ou iguais a meio dia
+        'courses': Course.objects.all(),
     }
     return render(request, 'core/talk_list.html', context)
