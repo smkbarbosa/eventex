@@ -15,6 +15,6 @@ def talk_list(request):
     context = {
         'morning_talks': Talk.objects.at_morning(), ## filtra todas as palestras menores que meio dia
         'afternoon_talks': Talk.objects.at_afternoon(), ## filtra palestra maiores ou iguais a meio dia
-        'courses': Course.objects.all(),
+
     }
     return render(request, 'core/talk_list.html', context)
