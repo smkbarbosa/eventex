@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'storages',
     'eventex.core',
     'eventex.subscriptions.apps.SubscriptionsConfig',
+    'eventex.certificate',
 )
 
 MIDDLEWARE_CLASSES = (
